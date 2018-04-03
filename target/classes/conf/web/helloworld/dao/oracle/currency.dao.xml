@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+<sqlMap namespace="com.erayt.examples.web.helloworld.dao.CurrencyDao">
+	
+	<typeAlias alias="Currency" type="com.erayt.examples.web.helloworld.bean.Currency" />
+	<sql id="currencyCols">
+		CYCODE,ENGNAME,CHSNAME,LIBUNIT,LIBAVALIBLE,AMTAVALIBLE,LIBBASE,ISMUL,CYTYPE,STATUS,HOLIDAYPARAM,TEST1
+	</sql>
+
+	
+
+	<select id="selectCurrency" parameterClass="String" resultClass="Currency">
+		SELECT * FROM XFUNDS_BASE_CURRENCY
+		WHERE CYCODE=#cyCode#
+	</select>
+	
+	<insert id="insertCurrency" parameterClass="Currency">
+		 INSERT INTO XFUNDS_BASE_CURRENCY( <include refid="currencyCols"/>)
+         VALUES(
+                #cyCode:VARCHAR#,#engName:VARCHAR#,#chsName:VARCHAR#, #libUnit:INTEGER#,#libAvalible:INTEGER#,#amtAvalible:INTEGER#,#libBase:INTEGER#,
+                #isMul:INTEGER#,#cyType:INTEGER#,#status:VARCHAR#,#holidayParam:VARCHAR#,#test1:DATE#
+               )
+	</insert>
+	
+	
+	<update id="updateCurrency" parameterClass="java.util.Map">
+		<![CDATA[ 
+		 	   UPDATE XFUNDS_BASE_CURRENCY CURR
+		 	   SET  CURR.CYCODE         =#currency.cyCode:VARCHAR#,
+		 	   		CURR.ENGNAME        =#currency.engName:VARCHAR#,
+		 			CURR.CHSNAME        =#currency.chsName:VARCHAR#,
+		 			CURR.LIBUNIT        =#currency.libUnit:INTEGER#,
+		 			CURR.LIBAVALIBLE    =#currency.libAvalible:INTEGER#,
+		 			CURR.AMTAVALIBLE    =#currency.amtAvalible:INTEGER#,
+		 			CURR.LIBBASE        =#currency.libBase:INTEGER#,
+		 			CURR.ISMUL          =#currency.isMul:INTEGER#,
+		 			CURR.CYTYPE         =#currency.cyType:INTEGER#,
+		 			CURR.STATUS         =#currency.status:VARCHAR#,
+		 			CURR.HOLIDAYPARAM   =#currency.holidayParam:VARCHAR#
+		 	   WHERE CYCODE=#cyCode:VARCHAR#
+		]]>
+	</update> 
+
+	<delete id="deleteCurrency" parameterClass="[Ljava.lang.String;">
+		DELETE FROM XFUNDS_BASE_CURRENCY
+		<dynamic prepend="WHERE">
+			<isNotNull>
+				CYCODE IN
+				<iterate conjunction="," open="(" close=")">
+					#[]#
+				</iterate>
+			</isNotNull>
+			<isNull>
+				1 = 0
+			</isNull>
+		</dynamic>		
+	</delete>
+	
+	
+</sqlMap>

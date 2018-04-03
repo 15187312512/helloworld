@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Layout - eraJs Demo</title>
+    <link rel="stylesheet" type="text/css" href="./css/demo.css">
+    <script type="text/javascript" src="../bootstrap.js"></script>
+    <script type="text/javascript" src="./js/my.js"></script>
+
+    <script type="text/javascript">
+       $(function(){
+
+
+        erajs.onReady(function(){
+
+	       return true;
+	    },{
+	        needValidated : true,
+	        validationPath:'./validation/validation.xml',
+	        loadValidationXml:true,
+	        targetForm : 'paramListForm'
+	    });
+
+
+
+})
+
+
+
+</script>
+</head>
+<body>
+
+
+<div style="margin:20px 0;"></div>
+<div id="layout" xtype="layout" style="width:1000px;height:600px;color: #666;">
+    <div id="np" data-options="region:'north',collapsible:false" style="height:100px;color: #666;">
+        <form  class="query-form"  method="POST" name="paramListForm" action="#">
+            <ul class="content_ul">
+                <li class="title75"><span class="">货币编号</span>：</li>
+                <li class="input100">
+                    <input id="cyCode" name="cyCode"  type="text" class="input-css input_widthAuto_query"  data-options="
+
+                        ">
+                </li>
+               
+                <li>
+                    <div id="searchBtn" xtype="button"  data-options="iconCls:'icon-search',width:80"
+                         custom-options="
+                        btnType:'query',
+                        refDgId : 'dg'
+                        ">
+                        搜索</div>
+                </li>
+            </ul>
+
+        </form>
+    </div>
+
+
+
+    <div id="cp" data-options="region:'center'," style="padding:5px;background:#eee;color: #666;">
+        <form   id="tbutton" method="POST" name="paramForm">
+            <a xtype="button" id="addBtn" data-options="iconCls:'icon-add'"
+                custom-options="
+
+                 dlgtitle:'新增信息',
+                 dlgw:900,
+                 dlgh:500,
+                 mustSelected : false,
+                 url:'./add.html',
+                 callback:addChange
+                ">增加</a>
+            <a xtype="button" id="editBtn" data-options="iconCls:'icon-edit'"
+                custom-options="
+
+                    refDgId:'dg',
+                    mustSelected:true,
+                    singleSelect:true,
+                    isEdit : true,
+                    dlgtitle:'修改信息',
+                    dlgw:900,
+                    dlgh:500,
+                    isEdit:true,
+                    url:'./edit.html',
+                    beforeRender:editMess,
+                    callback:editChange
+
+
+                "
+                >修改</a>
+            <a xtype="button" id="deleteBtn" data-options="iconCls:'icon-remove'"
+                custom-options="
+
+                    refDgId:'dg',
+                    singleSelect:false,
+
+                    autoRefresh:true,
+                    url:'./action/remove.do',
+                    actionType:'do',
+                    beforeExecute:deleteData
+                "
+
+            >删除</a>
+        </form>
+        <table id="dg" name="dg" xtype="datagrid"  style="width:1000px;height:250px"
+               data-options="
+			    singleSelect:false,
+			    pagination:true,
+			    collapsible:true,
+			    fitRowNumbers:true,
+			    rownumbers:true,
+			    url:'../../helloworld/query1.action?queryId=base.queryCurrency',
+			    method:'post',
+			    showTip : false,
+			    toolbar:'#tbutton'
+			    
+				" 
+				custom-options="
+			        identifyField : 'cyCode',
+                    queryFormName : 'paramListForm'
+                "
+        >
+            <thead>
+            <tr>
+                <th data-options="width:20,checkbox:true"></th>
+                <th data-options="field:'cyCode',width:240,align:'center'">货币代码(国标)</th>
+                <th data-options="field:'engName',width:240,align:'center'">英文名(国标)</th>
+                <th data-options="field:'chsName',width:240,align:'center'"> 货币中文名称 </th>
+                <th data-options="field:'libBase',width:240,align:'center'">计息基础</th>
+                
+                <th data-options="field:'cyType',width:240,align:'center'">货币代码(国标)</th>
+                <th data-options="field:'libUnit',width:240,align:'center'">英文名(国标)</th>
+                <th data-options="field:'libAvalible',width:240,align:'center'"> 货币中文名称 </th>
+                <th data-options="field:'holidayParam',width:240,align:'center'">计息基础</th>
+                
+                <th data-options="field:'statusName',width:240,align:'center'">货币代码(国标)</th>
+                <th data-options="field:'amtAvalible',width:240,align:'center'">英文名(国标)</th>
+                <th data-options="field:'status',width:240,align:'center'"> 货币中文名称 </th>
+                <th data-options="field:'isMul',width:240,align:'center'">计息基础</th>
+
+            </tr>
+            </thead>
+
+        </table>
+    </div>
+</div>
+</body>
+</html>

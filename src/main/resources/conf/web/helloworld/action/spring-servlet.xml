@@ -1,0 +1,30 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:s="http://www.erayt.com/schema/solar/core"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		    http://www.springframework.org/schema/beans/spring-beans-2.5.xsd  
+			http://www.erayt.com/schema/solar/core
+			http://www.erayt.com/schema/solar/3.0/solar-spring.xsd">
+
+	<!-- endpoint -->
+	<bean id="servlet" class="com.erayt.solar.module.servlet.endpoint.ServletEndpoint"
+		init-method="start" destroy-method="stop">
+		<property name="uri" value=".action" />
+		<property name="decodeTransformerRefs" value="httprequest" />
+		<property name="encodeTransformerRefs" value="httpresponse" />
+		<property name="messageHandler" ref="SERVLET" />
+	</bean>
+	
+	<!-- transformers -->
+	<bean id="httprequest" class="com.erayt.solar.module.servlet.transformer.HttpRequestTransformer" />
+	<bean id="httpresponse" class="com.erayt.solar.module.servlet.transformer.HttpResponseTransformer" />
+	<bean id="exeptionWrapHanlder" class="com.erayt.solar.module.handler.ExceptionWrapperHandler" />
+
+	<!-- route -->
+	<s:service id="SERVLET">
+		<!-- <s:cache key="@messageId|@queryId" timeToLive="100"> -->
+			<s:catch strategy="CATCH" handler="exeptionWrapHanlder">
+				<s:call path="@messageId" />
+			</s:catch>
+		<!-- </s:cache> -->
+	</s:service>
+</beans> 

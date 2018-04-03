@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:s="http://www.erayt.com/schema/solar/core" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		    http://www.springframework.org/schema/beans/spring-beans-2.5.xsd  
+			http://www.erayt.com/schema/solar/core
+			http://www.erayt.com/schema/solar/3.0/solar-spring.xsd"
+	default-autowire="byName">
+	
+	<!--配置一个 DAO。 class 是固定的，为 solar 框架的代理类-->
+	<bean id="currencyDao" class="com.erayt.solar.db.DaoProxyFactoryBean">
+	    <!-- daoInterface 配置用户的 DAO 操作接口，值为接口的类全名 -->
+	    <property name="daoInterface" value="com.erayt.examples.web.helloworld.dao.CurrencyDao" />
+	    <!-- sqlMapClient 配置 ibatis 的 sqlMapClient 的引用；用户一般情况下只要引用 sqlMapClient 就行,这个 bean 定义在 conf/db/spring/datasource.common.xml 里-->
+	    <property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	
+</beans>

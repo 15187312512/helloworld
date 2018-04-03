@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Reference Manual http://logback.qos.ch/manual/index.html -->
+
+<configuration>
+	<appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder charset="UTF-8">
+			<pattern>[%d{HH:mm:ss.SSS}][%5level][%thread][%logger{30}] : %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+	
+	<root level="INFO">
+		 <appender-ref ref="stdout" />
+	</root>
+
+	<logger name="org.apache" level="INFO" />
+	<logger name="org.springframework" level="INFO" />
+	<logger name="java.sql" level="INFO" />
+
+	<logger name="SOLAR.LOGGER" level="DEBUG" />
+	<logger name="com.erayt" level="DEBUG" />
+	<logger name="java.sql.Connection" level="INFO" />
+	<logger name="java.sql.PreparedStatement" level="INFO" />
+	<logger name="java.sql.ResultSet" level="INFO" />
+	<logger name="com.ibatis" level="INFO" />
+
+</configuration>

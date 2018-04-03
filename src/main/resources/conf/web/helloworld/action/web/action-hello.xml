@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:s="http://www.erayt.com/schema/solar/core" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		    http://www.springframework.org/schema/beans/spring-beans-2.5.xsd  
+			http://www.erayt.com/schema/solar/core
+			http://www.erayt.com/schema/solar/3.0/solar-spring.xsd"
+	default-autowire="byName">
+
+	<s:service id="/hello.action">
+		<s:bean ref="helloWorldService" method="hello"  parameters="@userId" result="result"/>
+	</s:service>
+</beans>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>currency</title>
+</head>
+<body>
+<form name="currencyForm3" action="../../insertCurrency.action" class="form-css">
+    <div xtype="layout">
+        <div data-options="region:'center',border:false" class="form-box">
+            <ul class="content_ul">
+                <li class="title120">
+                    <span class="require">*</span>
+                    <span class="LANGS" langid="currency.form.cyCode">货币代码</span>:
+                </li>
+                <li class="input180">
+                	<input id="quondamCyCode" type="hidden" name="cyCode" />
+                    <input id="cyCodeId" type="text" name="currency.cyCode" class="input-css"/>
+                </li>
+            </ul>
+            <ul class="content_ul">
+                <li class="title120">
+                    <span class="require">*</span>
+                    <span class="LANGS" langid="currency.form.engName">英文名</span>:
+                </li>
+                <li class="input180">
+                    <input type="text" name="currency.engName" class="input-css"/>
+                </li>
+            </ul>
+            <ul class="content_ul">
+                <li class="title120">
+                    <span class="require">*</span>
+                    <span class="LANGS" langid="currency.form.chsName">中文名</span>:
+                </li>
+                <li class="input180">
+                    <input type="text" name="currency.chsName" class="input-css"/>
+                </li>
+            </ul>
+            <ul class="content_ul">
+                <li class="title120">
+                    <span class="require">*</span>
+                    <span class="LANGS" langid="form.amtAvalible">交易金额精确位数</span>:
+                </li>
+                <li class="input180">
+                    <input type="text" name=currency.amtAvalible class="input-css"/>
+                </li>
+            </ul>
+            <ul class="content_ul">
+                <li class="title120">
+                    <span class="require">*</span>
+                    <span class="LANGS" langid="currency.form.status">状态</span>:
+                </li>
+                <li class="input180">
+                    <input xtype="combobox" name="currency.status" id="statusBox"
+                           data-options="
+					         url:'../json/currencyStatus.json',
+					         valueField:'codeVal',
+					         textField:'name'
+					 ">
+                </li>
+            </ul>
+            <ul class="content_ul areaul">
+                <li class="title120">
+                    <span class="LANGS" langid="currency.form.holidayParam">节假日参数</span>:
+                </li>
+                <li class="input180">
+                    <input type="checkbox" checked="checked" name="currency.holidayParam" value="CNY|"/>
+                    <span class="LANGS" langid="currency.form.cnyHoliday">人民币节假日</span>
+                </li>
+            </ul>
+        </div>
+        <div region="south" border="false" class="form-foot-btns">
+            <div id="submitBut" xtype="button" class="middleBtn" langid='currency.form.submit' iconCls="icon-save"
+                 custom-options="
+                    	btnType:'submit',
+                    	multipart:true,
+                    	refDgId:'currencyGrid'
+             "></div>
+            <div xtype="button" class="middleBtn" iconCls="icon-cancel" langid='currency.form.cancel'
+                 custom-options="
+                    	btnType:'cancel'
+            "></div>
+        </div>
+    </div>
+</form>
+</body>
+</html>

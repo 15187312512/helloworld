@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:s="http://www.erayt.com/schema/solar/core" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		    http://www.springframework.org/schema/beans/spring-beans-2.5.xsd  
+			http://www.erayt.com/schema/solar/core
+			http://www.erayt.com/schema/solar/3.0/solar-spring.xsd"
+	default-autowire="byName">
+
+	 <!-- action 配置 ，id为唯一标识 -->
+	<s:service id="/insert.action">
+	    <!-- ref 指向要调用的service服务；method指定要调用的方法，即服务调用实现类中的方法； 
+		parameters接收参数并传到具体实现类的方法，  如上面已对参数进行了处理，则其值为MESSAGE，
+		未做处理则值与前台请求参数名相同  ；result 返回的结果名 -->
+		<s:bean ref="currencyService" method="addCurrency"
+			parameters="@currency"  />
+		<!-- 返回前台数据过滤，vars标识返回前台的值 -->
+		
+	</s:service>
+	
+	<s:service id="/update.action">
+		<s:bean ref="currencyService" method="updateCurrency"
+			parameters="@currency,@currency.cyCode" />
+	</s:service>
+
+	<s:service id="/delete.action">
+		<s:bean ref="currencyService" method="deleteCurrency"
+			parameters="@cyCode"  />
+		
+	</s:service>
+</beans>

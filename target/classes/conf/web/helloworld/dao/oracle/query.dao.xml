@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+<sqlMap namespace="base">
+	<resultMap id="currencyResultMap" class="java.util.HashMap">
+		<result property="ROW_ID" column="ROW_ID" />
+		<result property="COUNTNUM" column="COUNTNUM" />
+		<result property="cyCode" column="CYCODE" javaType="java.lang.String"
+			jdbcType="VARCHAR" />
+		<result property="engName" column="ENGNAME" javaType="java.lang.String"
+			jdbcType="VARCHAR" />
+		<result property="chsName" column="CHSNAME" javaType="java.lang.String"
+			jdbcType="VARCHAR" />
+		<result property="libUnit" column="LIBUNIT" javaType="java.lang.Integer"
+			jdbcType="INTEGER" />
+		<result property="libAvalible" column="LIBAVALIBLE" javaType="java.lang.Integer"
+			jdbcType="INTEGER" />
+		<result property="amtAvalible" column="AMTAVALIBLE" javaType="java.lang.Integer"
+			jdbcType="INTEGER" />
+		<result property="libBase" column="LIBBASE" javaType="java.lang.Integer"
+			jdbcType="INTEGER" />
+		<result property="isMul" column="ISMUL" javaType="java.lang.Integer"
+			jdbcType="INTEGER" />
+		<result property="cyType" column="CYTYPE" javaType="java.lang.Integer"
+			jdbcType="INTEGER" />
+		<result property="status" column="STATUS" javaType="java.lang.String"
+			jdbcType="VARCHAR" />
+		<result property="test1" column="TEST1" 
+			 />
+		<result property="statusName" column="STATUSNAME" />
+		<result property="holidayParam" column="HOLIDAYPARAM" />
+	</resultMap>
+	<select id="queryCurrency" resultMap="currencyResultMap"
+		parameterClass="com.erayt.solar2.engine.query.QueryParam">
+		SELECT A.*, A.STATUS AS STATUSNAME
+		FROM (
+		SELECT ROW_NUMBER() OVER(ORDER BY CYCODE) ROW_ID , COUNT(CYCODE)
+		OVER() COUNTNUM ,
+		CYCODE,ENGNAME,CHSNAME,LIBUNIT,LIBAVALIBLE,AMTAVALIBLE,LIBBASE,ISMUL,CYTYPE,STATUS,HOLIDAYPARAM,TEST1
+		FROM XFUNDS_BASE_CURRENCY A
+		<dynamic prepend="WHERE">
+			<isNotEmpty prepend="AND" property="cyCode">
+				CYCODE LIKE '%'||TRIM(#cyCode#)||'%'
+			</isNotEmpty>
+			<isNotEmpty prepend="AND" property="engName">
+				ENGNAME LIKE '%'||TRIM(#engName#)||'%'
+			</isNotEmpty>
+			<isNotEmpty prepend="AND" property="chsName">
+				CHSNAME LIKE '%'||TRIM(#chsName#)||'%'
+			</isNotEmpty>
+		</dynamic>
+		)A WHERE 1 = 1
+		<isEqual property="pageCtrl" compareValue="true">
+			AND ROW_ID BETWEEN
+			#start:INTEGER# AND #limit:INTEGER#
+		</isEqual>
+	</select>
+</sqlMap>

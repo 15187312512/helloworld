@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>增删改查</title>
+<link rel="stylesheet" type="text/css" href="../css/currency.css">
+<script type="text/javascript" src="../../common/js/bootstrap.js"></script>
+<script type="text/javascript" src="../js/currency.js"></script>
+<script type="text/javascript">
+     
+
+
+        erajs.onReady(function(){
+
+	       return true;
+	    },{
+	        needValidated : true,
+	        validationPath:'../validation/validation.xml',
+	        loadValidationXml:true,
+	        targetForm : 'addForm'
+	    });
+
+
+
+
+    </script>
+</head>
+<body>
+	<div xtype="layout">
+		<div class="search_div"
+			data-options="region:'north',height:42,border:true">
+			<form target="_top" class="query-form" method="POST"
+				name="currencyListForm">
+				<ul class="content_ul">
+					<li class="title75">货币中文名：</li>
+					<li class="input100"><input type="text" name="chsName" class="input-css " /></li>
+					<li class="title75">货币英文名：</li>
+					<li class="input100"><input type="text" name="engName"  class="input-css" /></li>
+					<li class="title75">发布日期：</li>
+					<li>
+						<input id="db" xtype="datebox" name="test1" data-options="
+							     value : '2017/12/21',
+							     editable : false,
+							     onSelect : function(date){
+							        console.info(date.getDate());
+							    }
+							 "></input>
+					</li>
+					
+					<li>
+						<div id="queryId" xtype="button"
+							data-options="iconCls:'icon-search'"
+							custom-options="
+				                    	btnType : 'query',
+				                    	refDgId : 'currencyGrid'
+									">
+							查询
+						</div>
+					</li>
+				</ul>
+			</form>
+		</div>
+		<div data-options="region:'center',border:false" class="paddingTop5">
+			<table id="currencyGrid" xtype="datagrid"
+				data-options="
+			 				singleSelect:false,
+			  				url:'../../query1.action?queryId=base.queryCurrency',
+			 				toolbar:'#tbutton'
+			 			"
+				custom-options="
+							identifyField : 'cyCode',
+							queryFormName : 'currencyListForm'
+					">
+				<thead>
+					<tr>
+						<th data-options="field:'ck',checkbox:true"></th>
+						<th data-options="field:'cyCode',width:'16%',align:'left'">货币代码</th>
+						<th data-options="field:'engName',width:'16%',align:'left'">英文名</th>
+						<th data-options="field:'chsName',width:'16%',align:'left'">中文名</th>
+						<th data-options="field:'amtAvalible',width:'16%',align:'right'">交易金额精确位数</th>
+						<th data-options="field:'statusName',width:'15%',align:'center'">货币状态</th>
+						<th data-options="field:'test1',width:'16%',align:'center'">发布日期</th>
+					</tr>
+				</thead>
+			</table>
+			<div id="tbutton" style="padding: 5px;">
+				<div id="add" xtype="button" data-options="iconCls:'icon-add'"
+					custom-options="
+		 					   dlgtitle : '新增',
+		 					   dlgw:900,
+                 			   dlgh:500,
+		 					   mustSelected:false,
+		 					   url : 'add.html',
+		 					   autoRefresh : true
+		 					  ">
+				</div>
+				<div id="edit" xtype="button" data-options="iconCls:'icon-edit'"
+					custom-options="
+		 						dlgtitle : '修改',
+		 						dlgw:900,
+                 			    dlgh:500,
+		 					    isEdit : true,
+		 					   
+		 						url : 'edit.html'
+		 						
+		 						">
+				</div>
+				<div id="remove" xtype="button" data-options="iconCls:'icon-remove'"
+					custom-options="
+		 						url : '../../delete.action',
+		 						actionType : 'do',
+		 						singleSelect:false,
+		 						autoRefresh : true
+		 						">
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

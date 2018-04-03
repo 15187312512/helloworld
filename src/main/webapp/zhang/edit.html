@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Layout - eraJs Demo</title>
+    <link rel="stylesheet" type="text/css" href="./css/demo.css">
+    <script type="text/javascript" src="../bootstrap.js"></script>
+
+    <script type="text/javascript">
+       $(function(){
+
+
+        erajs.onReady(function(){
+
+	       return true;
+	    },{
+	        needValidated : true,
+	        validationPath:'./validation/validation.xml',
+	        loadValidationXml:true,
+	        targetForm : 'changeForm'
+	    });
+
+
+
+})
+    </script>
+</head>
+<body>
+<div>
+    <form name="changeForm" method="get">
+    <div data-options="region:'center',border:true "  >
+        <ul class="content_ul">
+            <li class="title140"><span class="require">*货币代码(国标) </span>：</li>
+            <li class="input180">
+                <input xtype="textbox"    name="cyCode"  class="input-css" />
+            </li>
+            <li class="title140"><span class="require">*英文名(国标) </span>：</li>
+            <li class="input180">
+                <input xtype="textbox"    name="engName"  class="input-css" />
+            </li>
+        </ul>
+        <ul class="content_ul">
+            <li class="title140"><span class="require">*货币中文名称</span>：</li>
+            <li class="input180">
+                <input xtype="textbox"    name="engName"  class="input-css" />
+            </li>
+            <li class="title140"><span class="">利率标价单位</span>：</li>
+            <li class="input180">
+                <input xtype="textbox"    name="libUni"  class="input-css" />
+            </li>
+        </ul>
+        <ul class="content_ul">
+            <li class="title140"><span class="">利率有效位数 </span>：</li>
+            <li class="input180">
+                <input xtype="textbox"    name="libAvalible"  class="input-css" />
+            </li>
+            <li class="title140"><span class="">金额有效位数</span>：</li>
+            <li class="input180">
+                <input xtype="textbox"    name="amtAvalible"  class="input-css" />
+            </li>
+        </ul>
+        <ul class="content_ul">
+            <li class="title140"><span class="">计息基础</span>：</li>
+            <li class="input180">
+
+                <select name="libBase" xtype="combobox" data-options="">
+
+                    <option value="0">ACT/360</option>
+                    <option value="1">ACT/365</option>
+
+                </select>
+            </li>
+            <li class="title140"><span class=""></span>报价类型：</li>
+            <li class="input180">
+                <select name="isMul" xtype="combobox" data-options="">
+
+                    <option value="0">直接报价</option>
+                    <option value="1">间接报价</option>
+
+                </select>
+            </li>
+        </ul>
+
+
+    </div>
+        <div region="south" border="false" class="form-foot-btns">
+            <div xtype="button" class="middleBtn" iconCls="icon-save"
+                 custom-options="
+                        btnType:'submit',
+                        refFormName:'changeForm',
+                        url:insert.action
+            "></div>
+            <div xtype="button" class="middleBtn" iconCls="icon-cancel"
+                 custom-options="
+                        btnType:'cancel'
+            "></div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

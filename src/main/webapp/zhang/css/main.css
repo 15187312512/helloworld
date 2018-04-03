@@ -1,0 +1,82 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: none repeat scroll 0 0 #fff;
+    font-family: verdana,helvetica,arial,sans-serif;
+    text-align: center;
+}
+textarea.html, textarea.js {
+    box-sizing: border-box;
+    height: 80px;
+    overflow: hidden;
+    width: 100%;
+}
+.header-center{
+    text-align: center;
+}
+#header {
+    background: none repeat scroll 0 0 #666;
+    direction: ltr;
+    text-align: center;
+}
+#header-inner {
+    margin: 0 auto;
+    padding: 2px 0;
+    text-align: left;
+    width: 100%;
+    overflow:hidden;
+}
+#mainwrap {
+    margin-top: 5px;
+    text-align: center;
+}
+#content {
+    background: none repeat scroll 0 0 #fff;
+    border: 0 none;
+    border-radius: 5px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: left;
+    width: 960px;
+}
+#content img {
+    margin: 0;
+}
+#footer {
+    padding: 20px;
+    text-align: center;
+}
+#topmenu {
+    text-align: right;
+}
+#topmenu a {
+    color: #fff;
+    display: inline-block;
+    padding: 1px 3px;
+    text-decoration: none;
+}
+#topmenu a:hover {
+    text-decoration: underline;
+}
+a.download-link {
+    color: #0000ff;
+}
+
+.pitem {
+    padding: 5px 0 5px 10px;
+}
+.pitem li {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10pt;
+    line-height: 20px;
+}
+.pitem a {
+    color: #444;
+    text-decoration: none;
+}
+.pitem a:hover {
+    color: #e26b1d;
+}

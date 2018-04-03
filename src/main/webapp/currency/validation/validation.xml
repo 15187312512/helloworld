@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<validations xmlns="http://www.erayt.com/solar2/connector/core/validate">
+
+
+    <validation name="addForm">
+        <item name="cyCode">
+            <rule name="required" value="1"></rule>
+            <rule name="maxlength" value="5"></rule>
+        </item>
+        <item name="engName">
+            <rule name="required" value="1"></rule>
+            <rule name="maxlength" value="5"></rule>
+        </item>
+        <item name="chsName">
+            <rule name="required" value="1"></rule>
+            <rule name="maxlength" value="5"></rule>
+        </item>
+        <item name="libUni">
+            <rule name="digits" value="1"></rule>
+            <rule name="maxlength" value="1"></rule>
+        </item>
+        <item name="libAvalible">
+            <rule name="digits" value="1"></rule>
+            <rule name="maxlength" value="1"></rule>
+        </item>
+        <item name="amtAvalible">
+            <rule name="digits" value="1"></rule>
+            <rule name="maxlength" value="1"></rule>
+        </item>
+        <item name="libBase">
+            <rule name="digits" value="1"></rule>
+            <rule name="maxlength" value="1"></rule>
+        </item>
+        <item name="isMul">
+            <rule name="digits" value="1"></rule>
+            <rule name="maxlength" value="1"></rule>
+        </item>
+    </validation>
+    
+     <validation name="changeForm">
+        <item name="cyCode">
+            <rule name="required" value="1"></rule>
+            <rule name="maxlength" value="5"></rule>
+        </item>
+        <item name="engName">
+            <rule name="required" value="1"></rule>
+            <rule name="maxlength" value="5"></rule>
+        </item>
+        <item name="chsName">
+            <rule name="required" value="1"></rule>
+            <rule name="maxlength" value="5"></rule>
+        </item>
+        <item name="libUni">
+            <rule name="digits" value="1"></rule>
+            <rule name="maxlength" value="1"></rule>
+        </item>
+        <item name="libAvalible">
+            <rule name="digits" value="1"></rule>
+            <rule name="maxlength" value="1"></rule>
+        </item>
+        <item name="amtAvalible">
+            <rule name="digits" value="1"></rule>
+            <rule name="maxlength" value="1"></rule>
+        </item>
+        <item name="libBase">
+            <rule name="digits" value="1"></rule>
+            <rule name="maxlength" value="1"></rule>
+        </item>
+        <item name="isMul">
+            <rule name="digits" value="1"></rule>
+            <rule name="maxlength" value="1"></rule>
+        </item>
+    </validation>
+</validations>

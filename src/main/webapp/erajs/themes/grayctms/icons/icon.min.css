@@ -1,0 +1,395 @@
+.icon-book-add {
+	background: url(images/book-add.png) center center no-repeat
+}
+
+.icon-book-del {
+	background: url(images/book-del.png) center center no-repeat
+}
+
+.icon-book-edit {
+	background: url(images/book-edit.png) center center no-repeat
+}
+
+.icon-book-add-min {
+	background: url(images/book-add-min.png) center center no-repeat
+}
+
+.icon-book-del-min {
+	background: url(images/book-del-min.png) center center no-repeat
+}
+
+.icon-book-edit-min {
+	background: url(images/book-edit-min.png) center center no-repeat
+}
+
+.icon-book-branch {
+	background: url(images/book-branch-home.png) center center no-repeat
+}
+
+.icon-book-market {
+	background: url(images/book-market.png) center center no-repeat
+}
+
+.icon-book-folder {
+	background: url(images/book-folder.png) center center no-repeat
+}
+
+.icon-book-folder-add {
+	background: url(images/book-folder-add.png) center center no-repeat
+}
+
+.icon-book-folder-del {
+	background: url(images/book-folder-del.png) center center no-repeat
+}
+
+.icon-book-down {
+	background: url(images/book-down.png) center center no-repeat
+}
+
+.icon-mini-del{background:url(images/tabs_icons.png) -34px center no-repeat}
+
+.icon-add-wks {
+	background: url(images/icon-add-wks.png) center center no-repeat
+}
+.icon-add-wks:hover {
+	background: url(images/icon-add-wks-w.png) center center no-repeat
+}
+.icon-wks33-32 {
+	background: url(images/33-32.png) center center no-repeat
+}
+.icon-wks222-32 {
+	background: url(images/222-32.png) center center no-repeat
+}
+.icon-win {
+	background: url(images/win.png) center center no-repeat
+}
+.icon-mini-next {
+	background: url(images/mini_next.png) center center no-repeat
+}
+.icon-closeall {
+	background: url(images/closeall.png) center center no-repeat
+}
+.icon-bell {
+	background: url(images/bell.png) center center no-repeat
+}
+.icon-line-y {
+	background: url(images/lineY.png) center center no-repeat
+}
+.window-header .panel-tool .icon-line-y:hover{
+	background:none;
+	background: url(images/lineY.png) center center no-repeat;
+}
+.icon-folder {
+	background: url(images/folder.png) center center no-repeat
+}
+.icon-view {
+	background: url(images/view.png) center center no-repeat
+}
+.icon-wks22-32 {
+	background: url(images/22-32.png) center center no-repeat
+}
+.icon-wks21-32 {
+	background: url(images/21-32.png) center center no-repeat
+}
+.icon-wks12-32 {
+	background: url(images/12-32.png) center center no-repeat
+}
+.icon-wks11-32 {
+	background: url(images/11-32.png) center center no-repeat
+}
+.icon-font-align-right {
+	background: url(images/font_align_right.png) center center no-repeat
+}
+.icon-font-align-left {
+	background: url(images/font_align_left.png) center center no-repeat
+}
+.icon-font-align-center {
+	background: url(images/font_align_center.png) center center no-repeat
+}
+.icon-font-size {
+	background: url(images/font_size.png) center center no-repeat
+}
+.icon-font-name {
+	background: url(images/font_name.png) center center no-repeat
+}
+.icon-font-color {
+	background: url(images/font_color.png) center center no-repeat
+}
+.icon-font-style {
+	background: url(images/font_style.png) center center no-repeat
+}
+.icon-font-bgcolor {
+	background: url(images/font_bgcolor.png) center center no-repeat
+}
+.icon-font-align {
+	background: url(images/font_align.png) center center no-repeat
+}
+.icon-holiday {
+	background: url(images/holiday.png) center center no-repeat
+}
+.icon-large-report {
+	background: url(images/large_report.png) center center no-repeat
+}
+.icon-large-query {
+	background: url(images/large_query.png) center center no-repeat
+}
+.icon-large-risk {
+	background: url(images/large_risk.png) center center no-repeat
+}
+.icon-large-trade {
+	background: url(images/large_trade.png) center center no-repeat
+}
+.icon-large-daysettle {
+	background: url(images/large_daysettle.png) center center no-repeat
+}
+.icon-large-position {
+	background: url(images/large_position.png) center center no-repeat
+}
+.icon-large-system {
+	background: url(images/large_system.png) center center no-repeat
+}
+.icon-set {
+	background: url(images/set.png) center center no-repeat
+}
+.window-header .panel-tool .icon-set:hover{
+	background:none;
+	background: url(images/set.png) center center no-repeat;
+}
+.icon-blank {
+	background: url(images/blank.gif) center center no-repeat
+}
+.icon-add {
+	background: url(images/edit_add.png) center center no-repeat
+}
+.icon-edit {
+	background: url(images/pencil.png) center center no-repeat
+}
+.icon-remove {
+	background: url(images/edit_remove.png) center center no-repeat
+}
+.icon-save {
+	background: url(images/filesave.png) center center no-repeat
+}
+.icon-cut {
+	background: url(images/cut.png) center center no-repeat
+}
+.icon-ok {
+	background: url(images/ok.png) center center no-repeat
+}
+.icon-no {
+	background: url(images/no.png) center center no-repeat
+}
+.icon-cancel {
+	background: url(images/cancel.png) center center no-repeat
+}
+.icon-reload {
+	background: url(images/reload.png) center center no-repeat
+}
+.window-header .panel-tool .icon-reload:hover{
+	background:none;
+	background: url(images/reload.png) center center no-repeat;
+}
+.icon-search {
+	background: url(images/search.png) center center no-repeat
+}
+.icon-search {
+	background: url(images/search.png) center center no-repeat
+}
+.icon-print {
+	background: url(images/print.png) center center no-repeat
+}
+.icon-help {
+	background: url(images/help.png) center center no-repeat
+}
+.icon-undo {
+	background: url(images/undo.png) center center no-repeat
+}
+.icon-redo {
+	background: url(images/redo.png) center center no-repeat
+}
+.icon-back {
+	background: url(images/back.png) center center no-repeat
+}
+.icon-sum {
+	background: url(images/sum.png) center center no-repeat
+}
+.icon-tip {
+	background: url(images/tip.png) center center no-repeat
+}
+.icon-filter {
+	background: url(images/filter.png) center center no-repeat
+}
+.icon-xls {
+	background: url(images/xls.png) center center no-repeat
+}
+.icon-down {
+	background: url(images/down.png) center center no-repeat
+}
+.icon-lock {
+	background: url(images/lock.png) center center no-repeat
+}
+.icon-man {
+	background: url(images/man.png) center center no-repeat
+}
+.icon-mini-add {
+	background: url(images/mini_add.png) center center no-repeat
+}
+.icon-mini-edit {
+	background: url(images/mini_edit.png) center center no-repeat
+}
+.icon-mini-refresh {
+	background: url(images/mini_refresh.png) center center no-repeat
+}
+.icon-large-picture {
+	background: url(images/large_picture.png) center center no-repeat
+}
+.icon-large-clipart {
+	background: url(images/large_clipart.png) center center no-repeat
+}
+.icon-large-shapes {
+	background: url(images/large_shapes.png) center center no-repeat
+}
+.icon-large-smartart {
+	background: url(images/large_smartart.png) center center no-repeat
+}
+.icon-large-chart {
+	background: url(images/large_chart.png) center center no-repeat
+}
+.icon-blank {
+	background: url(images/blank.gif) center center no-repeat
+}
+.icon-add {
+	background: url(images/edit_add.png) center center no-repeat
+}
+.icon-edit {
+	background: url(images/pencil.png) center center no-repeat
+}
+.icon-remove {
+	background: url(images/edit_remove.png) center center no-repeat
+}
+.icon-save {
+	background: url(images/filesave.png) center center no-repeat
+}
+.window-header .panel-tool .icon-save:hover{
+	background:none;
+	background: url(images/filesave.png) center center no-repeat;
+}
+.icon-cut {
+	background: url(images/cut.png) center center no-repeat
+}
+.icon-ok {
+	background: url(images/ok.png) center center no-repeat
+}
+
+.icon-no {
+	background: url(images/no.png) center center no-repeat
+}
+.icon-cancel {
+	background: url(images/cancel.png) center center no-repeat
+}
+.icon-reload {
+	background: url(images/reload.png) center center no-repeat
+}
+.icon-search {
+	background: url(images/search.png) center center no-repeat
+}
+.icon-preferences {
+	background: url(images/preferences.png) center center no-repeat
+}
+
+.icon-print {
+	background: url(images/print.png) center center no-repeat
+}
+.icon-help {
+	background: url(images/help.png) center center no-repeat
+}
+.icon-undo {
+	background: url(images/undo.png) center center no-repeat
+}
+.icon-redo {
+	background: url(images/redo.png) center center no-repeat
+}
+.icon-back {
+	background: url(images/back.png) center center no-repeat
+}
+.icon-sum {
+	background: url(images/sum.png) center center no-repeat
+}
+.icon-tip {
+	background: url(images/tip.png) center center no-repeat
+}
+.icon-filter {
+	background: url(images/filter.png) center center no-repeat
+}
+.icon-xls {
+	background: url(images/xls.png) center center no-repeat
+}
+.window-header .panel-tool .icon-xls:hover{
+	background:none;
+	background: url(images/xls.png) center center no-repeat;
+}
+
+.icon-down {
+	background: url(images/down.png) center center no-repeat
+}
+.icon-lock {
+	background: url(images/lock.png) center center no-repeat
+}
+.icon-man {
+	background: url(images/man.png) center center no-repeat
+}
+.icon-mini-add {
+	background: url(images/mini_add.png) center center no-repeat
+}
+.icon-mini-edit {
+	background: url(images/mini_edit.png) center center no-repeat
+}
+.icon-mini-refresh {
+	background: url(images/reload-1.png) center center no-repeat
+}
+.icon-large-picture {
+	background: url(images/large_picture.png) center center no-repeat
+}
+.icon-large-clipart {
+	background: url(images/large_clipart.png) center center no-repeat
+}
+.icon-large-shapes {
+	background: url(images/large_shapes.png) center center no-repeat
+}
+.icon-large-smartart {
+	background: url(images/large_smartart.png) center center no-repeat
+}
+.icon-large-chart {
+	background: url(images/large_chart.png) center center no-repeat
+}
+.icon-simulate {
+	background: url(images/arrow_switch.png) center center no-repeat
+}
+.icon-copy {
+	background: url(images/calculator_add.png) center center no-repeat
+}
+.icon-auth {
+	background: url(images/group_go.png) center center no-repeat
+}
+.icon-clear {
+	background: url(images/paintbrush.png) center center no-repeat
+}
+.icon-virtual {
+	background: url(images/virtual_add.png) center center no-repeat
+}
+.icon-simulatecredit {
+	background: url(images/simulatecredit.png) center center no-repeat
+}
+.icon-audit {
+	background: url(images/audit.png) center center no-repeat
+}
+.icon-batch{
+	background: url(images/batch.png) center center no-repeat
+}
+.icon-relevance{
+	background: url(images/relevance.png) center center no-repeat
+}
+
+
+
+

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" 
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		    http://www.springframework.org/schema/beans/spring-beans-2.5.xsd  
+			http://www.erayt.com/schema/solar/core
+			http://www.erayt.com/schema/solar/3.0/solar-spring.xsd"
+	default-autowire="byName">
+	<!-- 当前项目的基础配置文件 -->
+	<bean id="configure"
+		class="com.erayt.solar.spring.SolarPropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:conf/web/helloworld/config.properties</value>
+			</list>
+		</property>
+	</bean>
+	
+	 <!-- datasouce方式连接数据库，会读取config.properties配置文件中的数据库配置 -->
+	<import resource="classpath*:conf/db/spring/datasource.xml" />
+	
+	<!-- 查询组件引入，如不使用框架查询组件可不引入 -->
+	<import resource="classpath*:conf/spring/spring-query.xml" />
+
+	<!-- 接入方式配置 -->	
+	<import resource="classpath:conf/web/helloworld/action/spring-servlet.xml" />
+	
+	
+	<!-- WEB Action配置 -->
+	<import resource="classpath:conf/web/helloworld/action/web/action-hello.xml" />
+	<import resource="classpath:conf/web/helloworld/action/web/action-currency.xml"/>
+	<import resource="classpath:conf/web/helloworld/action/web/action-query.xml"/>
+ 	
+ 	<!-- Service 配置 -->
+ 	<import resource="classpath:conf/web/helloworld/service/spring-service.xml"/>
+	
+	<!-- ibatis 配置 -->
+	<import resource="classpath:conf/web/helloworld/db/spring-db.xml" />
+	
+</beans>

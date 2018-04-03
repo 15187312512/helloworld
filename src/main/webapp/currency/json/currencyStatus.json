@@ -1,0 +1,4 @@
+[
+{"codeVal":"0","codeValName":"0…正常","dispSeq":1,"id":"5167","isVal":"0","name":"正常","parentId":"5167","rmk1":"状态为正常或者停用","rmk2":"公共类型","rmk3":"正常","sname":"正常","type":"P02"},
+{"codeVal":"1","codeValName":"1…停用","dispSeq":2,"id":"5168","isVal":"0","name":"停用","parentId":"5168","rmk1":"状态为正常或者停用","rmk2":"公共类型","rmk3":"停用","sname":"停用","type":"P02"}
+]
